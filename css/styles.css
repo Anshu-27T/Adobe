@@ -1,0 +1,280 @@
+/* Base styles for all devices */
+
+
+.navbar .logo {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+  padding-right: 10rem;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+
+/* Mobile - 320px */
+@media (max-width: 320px) {
+  .navbar .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  .navbar .logo {
+    font-size: 1.3rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop Small - 1024px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .navbar .logo {
+    font-size: 1.4rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop Medium - 1280px */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .navbar .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+
+  main {
+    padding: 2.5rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop Large - 1440px */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .navbar .logo {
+    font-size: 1.6rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1.15rem;
+  }
+
+  main {
+    padding: 3rem;
+  }
+
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+/* Desktop X-Large - 1920px */
+@media (min-width: 1920px) {
+  .navbar .logo {
+    font-size: 1.7rem;
+  }
+
+  .nav-links {
+    gap: 1.7rem;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+  }
+
+}
+
+/* Product Section Styles */
+.product-section {
+  display: flex;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.product-box {
+  display: flex;
+  width: 28rem;
+  height: 18rem;
+  border: 1px solid #ccc; /* Light grey border */
+  background: #1b252c 0% 0% no-repeat padding-box;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center;
+}
+.line {
+  margin-top: 20%;
+  width: 102px;
+  height: 8px;
+  /* UI Properties */
+  background: var(--primary-brand) 0% 0% no-repeat padding-box;
+  background: #1363df 0% 0% no-repeat padding-box;
+  opacity: 1;
+}
+.inner-box {
+  display: flex; 
+  justify-content: center; /* Center content horizontally */
+  width: 2.25rem; /* Example width */
+}
+
+.product-image {
+  left: 30rem;
+  margin-top: 1rem;
+  width: "100%";
+  height: "100%";
+  /* UI Properties */
+  opacity: 1;
+}
+
+
+/* Media Queries for Responsive Design */
+
+/* Mobile - 320px */
+@media (max-width: 320px) {
+  .product-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .inner-box {
+    display: flex; 
+    justify-content: center; /* Center content horizontally */
+    width: 25rem; /* Example width */
+  }
+  .product-box
+  .product-image {
+    width: 80%;
+    height: auto;
+  }
+
+  .product-image img {
+    height: auto;
+  }
+}
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  .product-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .inner-box{
+    display: none;
+  }
+
+   .inner-box-mobile{
+    display: flex;
+    width: 8rem;
+    height: 8rem;
+    border: 1px solid #ccc; /* Light grey border */
+    background: #1b252c 0% 0% no-repeat padding-box;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    margin-top: 4rem;
+    position: absolute;
+  }
+
+  .product-box{
+    display: none;
+  }
+
+
+  .product-image img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+/* Desktop Small - 1024px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .product-section {
+    flex-direction: row;
+  }
+}
+
+/* Desktop Medium - 1280px */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .product-section {
+    flex-direction: row;
+  }
+}
+
+/* Desktop Large - 1440px */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .product-section {
+    flex-direction: row;
+  }
+}
+
+/* Desktop X-Large - 1920px */
+@media (min-width: 1920px) {
+  .product-section {
+    flex-direction: row;
+  }
+}
+
+

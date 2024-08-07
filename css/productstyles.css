@@ -1,0 +1,219 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.sortcontainer {
+  display: flex;
+  /* max-width: 100rem; */
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+/* Header section */
+.sortheader {
+  display: flex;
+  justify-content: flex-end; 
+  height: 20%;
+  
+}
+
+.filter-tag {
+    width: 20rem;
+    color: black;
+    font-size: small;
+    text-align: right;
+}
+
+.text{
+    font-size: 10px;
+}
+.filterheader {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    height: 50px; 
+    padding: 0 10px; 
+  }
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  border: 1px solid #ffffff;
+  border-color: lightgrey;
+  border-radius: 8px;
+  margin: 10px;
+  width: 20rem;
+  height: 20rem;
+  align-content: center;
+  text-align: center;
+}
+
+.filter-options {
+width: 10rem;
+padding-top: 2vh;
+}
+.item img {
+  max-width: 50%;
+  height: 50%;
+  border-radius: 8px;
+}
+
+.item h2 {
+  font-size: 12px;
+ 
+}
+
+.filter-title-mobile{
+  display: none;
+}
+.pagination-controls {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination-controls button {
+  border: none;
+  color: rgba(9, 2, 2, 0.962);
+  font-size: 10px;
+  margin: 0 5px;
+}
+
+.pagination-controls button.active {
+  color: #171819;
+}
+
+.pagination-controls button:disabled {
+  background: #ddd;
+  cursor: not-allowed;
+}
+
+#searchBar {
+  width: 22rem;
+  padding: 0.5rem;
+  margin-top: 10px;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 20px;
+}
+.search-bar-container {
+display: flex;
+justify-content:right;
+}
+
+.sort-by-price {
+  padding: 5px ;
+  width: 5rem;
+  align-items: flex-end;
+  font-size: 10px;
+  background-color:rgb(227, 223, 223);
+  color: black;
+  border-width: 1px;
+  border-color: #cacbcd;
+  border-radius: 5px;
+  text-align: left;
+}
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #f8f9fa; 
+  border-right: 1px solid #ddd; 
+}
+.no-result{
+  display: flex;
+  justify-content: center;
+}
+
+.filter label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.filter-checkbox {
+  margin-right: 10px;
+}
+
+#result-count {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.filter-title {
+  padding-left: 10rem;
+  padding-bottom: 1rem;
+  font-size: small
+}
+
+@media (max-width: 600px) {
+  .filter-title {
+   display: none;
+  }
+
+  .item-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: auto;
+  }
+
+  .item {
+    border: 1px solid #ffffff;
+    border-color: lightgrey;
+    border-radius: 8px;
+    width: 20rem;
+    padding: 2%;
+    height: 20rem;
+    align-content: center;
+    text-align: center;
+  }
+
+  .filter-title-mobile {
+  font-size: small;
+   }
+  .filter-options {
+    display: none; /* Hide checkboxes on mobile */
+  }
+  #searchBar {
+    width: 12rem;
+    margin-top: 10px;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 20px;
+  }
+
+  .filterheader{
+    display: flex;
+    justify-content:center;
+  }
+  .search-bar-container {
+    display: flex;
+    justify-content:center;
+    }
+
+    
+  .sortheader {
+    text-align: center;
+  }
+
+  .filter-checkbox {
+    display: none;
+  }
+
+  /* Showing text in place of checkboxes and button */
+  .filter-options::before {
+    display: none;
+  }
+.filter-tag{
+    display: none;
+}
+  .sortheader::before {
+    content: "Sort";
+    display: block;
+    font-weight: bold;
+    padding-right: 2rem;
+  }
+}
+
+

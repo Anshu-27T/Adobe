@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/flexstyle.css" />
+    <link rel="stylesheet" href="./css/productstyles.css" />
+
+    <title>Shopping Page</title>
+  </head>
+  <body>
+ 
+      <nav class="navbar" role="navigation" aria-label="Main Navigation">
+          <div class="navbar-flex container">
+              <a href="#" class="logo">VENIA</a>
+              <div class="main-menu-items">
+                <ul class="main-menu-list">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Women</a></li>
+                  <li><a href="#">Men</a></li>
+                  <li><a href="#">SmartGear </a></li>
+                  <li><a href="#">Accessories </a></li>
+                </ul>
+                </div>
+                <!-- Mobile Menu -->
+                <div class="mobile-menu">
+                  <!-- Hamburger button -->
+                  <div
+                    class="mobile-menu-toggle"
+                    role="button"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu-items"
+                    aria-label="Open mobile menu"
+                    tabindex="0"
+                  >
+                  <i class="fas fa-bars fa-2x"></i>
+                </div>
+                <!-- Mobile Menu Items -->
+                <div class="mobile-menu-items">
+                  <ul class="main-menu-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Women</a></li>
+                    <li><a href="#">Men</a></li>
+                    <li><a href="#">SmartGear </a></li>
+                    <li><a href="#">Accessories </a></li>
+                  </ul>
+                </div>
+              </div>
+
+           
+        </div>
+      </nav>
+      <header >
+        <div class="hero">
+
+          <div class="container hero-flex">
+            <div class="product-box">
+              <div class="inner-box">
+                Men's Outware
+              </div>
+             
+            </div>
+          
+            <div class="product-image">
+              <img src="./images/hoddie.jpg" alt="Hoodie Image" />
+            </div>
+            <div class="inner-box-mobile">
+              Men's Outware
+            </div>
+          </div>
+          
+          <div class="search-bar-container">
+            <input type="text" id="searchBar" placeholder="Search for products...">
+          </div>
+          <div class="filterheader">
+            <div class="filter-tag">
+             Clothing / Women’s / Outerwear
+            </div>
+            <button id="sort-by-price" class="sort-by-price">Sort by Price</button>
+          </div>
+        </div>
+      </header>
+
+  <div class="sortcontainer">
+    <div class="filter-title">Filters
+      <div class="filter-options">
+        <label class="filter-label"><input type="checkbox" class="filter-checkbox" value="women's clothing"> Women's Wear</label><br>
+        <label class="filter-label"><input type="checkbox" class="filter-checkbox" value="men's clothing"> Men's Wear</label><br>
+        <label class="filter-label"><input type="checkbox" class="filter-checkbox" value="footwear"> Footwear</label>
+      </div>
+    </div>
+    <div class="filter-title-mobile">Filters</div>
+    <section>
+      <div id="item-container" class="item-container"></div>
+      </section>
+      </div>
+      <!-- pagination -->
+    <div id="pagination-controls" class="pagination-controls"></div>
+
+<script src="./js/product.js"></script>
+<script src="js/script.js"></script>
+</section>
+  </body>
+</html>
