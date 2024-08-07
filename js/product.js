@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let items = [];
     let filteredItems = [];
      const searchInput = document.getElementById('searchBar')
-     let shownores = false
+     const loader = document.getElementById('loader');
 
     function displayItems(page) {
         itemContainer.innerHTML = '';
@@ -73,17 +73,19 @@ document.addEventListener('DOMContentLoaded', () => {
 searchInput.addEventListener('input', filterItems);
     sortButton.addEventListener('click', sortItemsByPrice);
     checkboxes.forEach(checkbox => checkbox.addEventListener('change', filterItems));
-
+    loader.style.display = 'block';
     fetch('https://fakestoreapi.com/products')
         .then(response => response.json())
         .then(data => {
             items = data;
             filteredItems = items; // Initially no filter
             displayItems(currentPage);
+            loader.style.display = 'none';
         })
         .catch(error => {
             console.error('Error fetching items:', error);
             itemContainer.innerHTML = '<p>Failed to load items.</p>';
+            loader.style.display = 'none';
         });
 });
 
